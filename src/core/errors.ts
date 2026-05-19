@@ -21,3 +21,17 @@ export class PathRefusedError extends SkillSyncError {
     this.name = "PathRefusedError";
   }
 }
+
+export class LlmError extends SkillSyncError {
+  constructor(message: string) {
+    super(4, message);
+    this.name = "LlmError";
+  }
+}
+
+export class KeychainError extends SkillSyncError {
+  constructor(message: string) {
+    super(5, message);
+    this.name = "KeychainError";
+  }
+}
